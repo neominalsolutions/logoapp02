@@ -9,6 +9,7 @@ function RootLayout() {
 				<Link to="/use-Memo">Use Memo</Link>{' '}
 				<Link to="/use-Callback">Use Callback</Link>{' '}
 				<Link to="/use-Ref">Use Ref</Link>{' '}
+				<Link to="/use-Ref-Html">Use Ref Html</Link>{' '}
 			</nav>
 			<main className="w-full p-10">
 				<Outlet />

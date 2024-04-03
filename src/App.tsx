@@ -1,10 +1,24 @@
 import { useRoutes } from 'react-router-dom';
 import './App.css';
-import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
-import RootLayout from './layouts/RootLayout';
-import UseMemoSample from './pages/useMemo/UseMemoSample';
-import UseCallbackSample from './pages/useCallback/UseCallbackSample';
-import UseRefSample from './pages/useRef/UseRefSample';
+// import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
+// import RootLayout from './layouts/RootLayout';
+// import UseMemoSample from './pages/useMemo/UseMemoSample';
+// import UseCallbackSample from './pages/useCallback/UseCallbackSample';
+// import UseRefSample from './pages/useRef/UseRefSample';
+import { lazy } from 'react';
+// import UseRefHtmlSample from './pages/useRef/UseRefHtmlSample';
+
+const UseRefHtmlSample = lazy(() => import('./pages/useRef/UseRefHtmlSample'));
+const UseRefSample = lazy(() => import('./pages/useRef/UseRefSample'));
+
+const RootLayout = lazy(() => import('./layouts/RootLayout'));
+const UseMemoSample = lazy(() => import('./pages/useMemo/UseMemoSample'));
+
+const UseCallbackSample = lazy(
+	() => import('./pages/useCallback/UseCallbackSample')
+);
+
+const ReactMemoSample = lazy(() => import('./pages/reactMemo/ReactMemoSample'));
 
 function App() {
 	return useRoutes([
@@ -27,6 +41,10 @@ function App() {
 				{
 					path: 'use-Ref',
 					Component: UseRefSample,
+				},
+				{
+					path: 'use-Ref-Html',
+					Component: UseRefHtmlSample,
 				},
 			],
 		},
