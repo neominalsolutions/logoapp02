@@ -1,0 +1,10 @@
+{
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["prettier"],
+    "ignorePatterns":["**prettier-sample.js"],
+    "rules": {
+      "prettier/prettier": ["error"],
+      "no-unused-vars":"error",
+      "no-undef":"error"
+    }
+}
