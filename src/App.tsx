@@ -3,11 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import MediaCard from './components/MediaCard';
 import Row from './components/Row';
+import TailwindCssSample from './components/TailwindCssSample';
 
 function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
+				<TailwindCssSample display="flex-col" />
+
 				<Row>
 					<p>P element with Row </p>
 				</Row>
@@ -35,6 +38,8 @@ function App() {
 						}}
 					/>
 				</Row>
+
+				<h1 className="text-3xl font-bold underline">Hello world!</h1>
 			</header>
 		</div>
 	);
