@@ -6,6 +6,7 @@ import './App.css';
 // import UseCallbackSample from './pages/useCallback/UseCallbackSample';
 // import UseRefSample from './pages/useRef/UseRefSample';
 import { lazy } from 'react';
+//import EnvSample from './pages/envDemo/EnvSample';
 // import UseRefHtmlSample from './pages/useRef/UseRefHtmlSample';
 
 const UseRefHtmlSample = lazy(() => import('./pages/useRef/UseRefHtmlSample'));
@@ -19,6 +20,8 @@ const UseCallbackSample = lazy(
 );
 
 const ReactMemoSample = lazy(() => import('./pages/reactMemo/ReactMemoSample'));
+
+const EnvSample = lazy(() => import('./pages/envDemo/EnvSample'));
 
 function App() {
 	return useRoutes([
@@ -45,6 +48,10 @@ function App() {
 				{
 					path: 'use-Ref-Html',
 					Component: UseRefHtmlSample,
+				},
+				{
+					path: 'env-Sample',
+					Component: EnvSample,
 				},
 			],
 		},
