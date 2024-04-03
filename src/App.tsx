@@ -4,6 +4,7 @@ import ReactMemoSample from './pages/reactMemo/ReactMemoSample';
 import RootLayout from './layouts/RootLayout';
 import UseMemoSample from './pages/useMemo/UseMemoSample';
 import UseCallbackSample from './pages/useCallback/UseCallbackSample';
+import UseRefSample from './pages/useRef/UseRefSample';
 
 function App() {
 	return useRoutes([
@@ -22,6 +23,10 @@ function App() {
 				{
 					path: 'use-Callback',
 					Component: UseCallbackSample,
+				},
+				{
+					path: 'use-Ref',
+					Component: UseRefSample,
 				},
 			],
 		},
