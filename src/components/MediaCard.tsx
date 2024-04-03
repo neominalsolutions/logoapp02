@@ -10,6 +10,7 @@ import {
 export type MediaButton = {
 	text: string;
 	icon?: string;
+	type: string;
 };
 
 export type MediaCardProps = {
@@ -17,6 +18,7 @@ export type MediaCardProps = {
 	title: string;
 	description: string;
 	buttons: MediaButton[];
+	onButtonClick?: (type: string) => void; // action Props
 };
 
 export default function MediaCard({
@@ -24,6 +26,7 @@ export default function MediaCard({
 	title,
 	description,
 	buttons,
+	onButtonClick,
 }: MediaCardProps) {
 	return (
 		<Card sx={{ maxWidth: 345 }}>
@@ -40,7 +43,17 @@ export default function MediaCard({
 				{buttons.map((btn: MediaButton, index: number) => {
 					return (
 						<span key={index}>
-							<Button key={index} size="small">
+							<Button
+								onClick={() => {
+									// hangi butonun hangi tipte fırlatılacağını gönderdik.
+									// onButtonClick prop undefined değilse çalışacak
+									if (onButtonClick) {
+										onButtonClick(btn.type);
+									}
+								}}
+								key={index}
+								size="small"
+							>
 								{btn.text}
 							</Button>
 						</span>
