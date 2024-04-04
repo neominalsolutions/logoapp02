@@ -1,4 +1,3 @@
-import { env } from 'process';
 import React from 'react';
 
 function EnvSample() {
