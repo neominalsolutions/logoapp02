@@ -6,6 +6,8 @@ import './App.css';
 // import UseCallbackSample from './pages/useCallback/UseCallbackSample';
 // import UseRefSample from './pages/useRef/UseRefSample';
 import { lazy } from 'react';
+import ReactContextApiDispatcher from './pages/reactContextApi/ReactContextApiDispatcher';
+import ReactContextApiSelector from './pages/reactContextApi/ReactContextApiSelector';
 //import EnvSample from './pages/envDemo/EnvSample';
 // import UseRefHtmlSample from './pages/useRef/UseRefHtmlSample';
 
@@ -52,6 +54,14 @@ function App() {
 				{
 					path: 'env-Sample',
 					Component: EnvSample,
+				},
+				{
+					path: 'context-dispatcher',
+					Component: ReactContextApiDispatcher,
+				},
+				{
+					path: 'context-selector',
+					Component: ReactContextApiSelector,
 				},
 			],
 		},

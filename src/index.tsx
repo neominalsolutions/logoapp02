@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/roboto/300.css';
 import { BrowserRouter } from 'react-router-dom';
+import CounterProvider from './contexts/CounterContext';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.Suspense fallback={<>... loading </>}>
 		<BrowserRouter>
-			<App />
+			<CounterProvider>
+				<App />
+			</CounterProvider>
 		</BrowserRouter>
 	</React.Suspense>
 );

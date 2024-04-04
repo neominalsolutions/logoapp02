@@ -2,6 +2,8 @@ import React from 'react';
 import TailwindCssSample from '../../components/TailwindCssSample';
 import Row from '../../components/Row';
 import MediaCard from '../../components/MediaCard';
+import CounterProvider from '../../contexts/CounterContext';
+import App from '../../App';
 
 function UISample() {
 	return (
