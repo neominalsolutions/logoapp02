@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function EnvSample() {
+	useEffect(() => {
+		fetch(`${process.env.REACT_APP_PRODUCT_ENDPOINT}`).then();
+	});
+
 	return (
 		<div>
 			<div>Env: {process.env.REACT_APP_ENV}</div>
